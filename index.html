@@ -10,12 +10,11 @@
 	<style>
 
 		@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-        @import url('https://fonts.googleapis.com/css?family=Monoton');
+		@import url('https://fonts.googleapis.com/css?family=Monoton');
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
+		/* --------------------------------------- */
+		/* --------------------------------------- */
+		/* --------------------------------------- */
 		
 		:root {
 			--color-background: #31037d;
@@ -34,97 +33,178 @@
 			--font-name: Righteous;
 		}
 
-        html {
-            height: 100%;
-            max-height: 100%;
-        }
+		/* --------------------------------------- */
 
-		body {
-            background-color: var(--color-background);
-			font-family: var(--font-name);
-			height: 100vh;
+		*, *::before, *::after {
+			box-sizing: border-box;
 		}
 
+		* {
+			line-height: calc(1em + 0.5rem);
+			margin: 0;
+		}
 
+		html {
+			font-size: 10px;
+			/* line-height: 1.5; */
+			/* max-height: 100%; */
+		}
 
+		html, body {
+			height: 100vh;
+			/* height: 100%; */
+		}
 
+		body {
+			font-size: 1rem;
+			/* line-height: 1.5; */
+			-webkit-font-smoothing: antialiased;
+		}
 
+		img, picture, video, canvas, svg {
+			display: block;
+			max-width: 100%;
+		}
 
+		input, button, textarea, select {
+			font: inherit;
+		}
+		
+		p, h1, h2, h3, h4, h5, h6 {
+			overflow-wrap: break-word;
+		}
 
-        #bg {
-		    animation: 120s scroll infinite linear;
-            background-image: url('https://www.svgrepo.com/show/119630/duck-hand-drawn-wheels-toy.svg');
-            background-size: 96px 96px;
-            bottom: 0;
-            height: 100vh;
-            left: 0;
-            position: fixed;
-		    right: 0;
-		    top: 0;
-		    width: 100vw;
-		    opacity: 0.1;
+		a, a:active, a:hover, a:visited,
+		button, button:active, button:hover, button:active {
+			background-color: transparent;
+			color: inherit;
+			text-decoration: none;
+		}
+
+		ol, ul {
+			list-style: none;
+		}
+
+		/* --------------------------------------- */
+
+		body {
+			background-color: var(--color-background);
+			font-family: var(--font-name);
+		}
+		
+		#bg {
+			animation: 120s scroll infinite linear;
+			background-image: url('https://www.svgrepo.com/show/119630/duck-hand-drawn-wheels-toy.svg');
+			background-size: 96px 96px;
+			bottom: 0;
+			height: 100vh;
+			left: 0;
+			opacity: 0.1;
+			position: fixed;
+			right: 0;
+			top: 0;
+			width: 100vw;
 		} 
 
 		@-webkit-keyframes scroll {
-		    100% { background-position: -3000px 0px; }
+			100% { background-position: -3000px 0px; }
 		}
 
 		@-moz-keyframes scroll {
-		    100% { background-position: -3000px 0px; }
+			100% { background-position: -3000px 0px; }
 		}
 
 		@-o-keyframes scroll { 
-            100% { background-position: -3000px 0px; }
+			100% { background-position: -3000px 0px; }
 		}
 
 		@-ms-keyframes scroll {
-		    100% { background-position: -3000px 0px; }
+			100% { background-position: -3000px 0px; }
 		}
 
 		@keyframes scroll {
-		    100% { background-position: -3000px 0px; }
+			100% { background-position: -3000px 0px; }
 		}
 
 
-        .container-root {
-            display: grid;
-            grid-template-rows: 1fr 7.2rem;
-            height: 100vh;
-            min-height: 100vh;
-            max-height: 100vh;
-        }
-
-        header {
-            display: grid;
-            grid-template-columns: 4.8rem repeat(2, 1fr) 4.8rem;
-        }
-
-        header {
-            padding-top: 2.4rem;
-        }
-
-        .left {
-            grid-column: 2/3;
-        }
-
-        .right {
-            grid-column: 3/4;
-            justify-self: right;
-        }
-
-        footer {
-            display: grid;
-            grid-row: 2/3;
-        }
-
-        .footer-content {
-            align-self: flex-end;
-            justify-self: center;
-        }
 
 
+		.container-root {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 25fr 75fr;
+			height: 100vh;
+		}
+
+		header {
+			
+			
+			font-size: 4.8rem;
+			grid-column: 1/3;
+			grid-row: 1/2;
+			margin: 6.0rem 9.6rem 0;
+			text-transform: uppercase;
+		}
+
+		.header-text {
+			color: var(--color-blue);
+		}
+
+		
+		
+
+		footer {
+			align-self: center;
+			display: flex;
+			grid-column: 1/3;
+			grid-row: 1/3;
+			justify-content: center;
+		}
 
 
+		.coming-soon {
+			
+			font-weight: 400;
+			font-family: 'Monoton', cursive;
+			font-size: 3.0rem;
+			
+			letter-spacing: .3rem;
+			text-align: center;
+			text-transform: uppercase;
+			
+		}
+
+	@media screen and (min-width: 768px) {
+
+		header {
+			
+	
+			
+			margin: 6.0rem 9.6rem 0;
+		}
+
+		.header-text {
+			
+			font-size: 3.6rem;
+			justify-self: right;
+		}
+
+		
+		.coming-soon {
+			font-size: 4.8rem;
+			width: 25vw;
+		}
+	}
+
+
+
+
+
+
+
+
+
+	
 
 		.c-rainbow {
 			/* counter-reset: rainbow; */
@@ -133,13 +213,13 @@
 			padding: 0;
 			position: relative;
 		}
-				
+						
 		.c-rainbow__layer {
 			--text-color: var(--color-foreground);
 			/* counter-increment: rainbow; */
 			animation: rainbow 1.5s ease-in-out infinite;
-            color: var(--text-color);
-            font-size: 3rem;
+			color: var(--text-color);
+			/* font-size: 3rem; */
 			text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black), 4px 4px 0 rgba(0, 0, 0, 0.2);
 		}
         
@@ -224,107 +304,154 @@
         
 
 
-@-webkit-keyframes text-flicker-in-glow{0%{opacity:0}10%{opacity:0;text-shadow:none}10.1%{opacity:1;text-shadow:none}10.2%{opacity:0;text-shadow:none}20%{opacity:0;text-shadow:none}20.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.25)}20.6%{opacity:0;text-shadow:none}30%{opacity:0;text-shadow:none}30.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.5%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.6%{opacity:0;text-shadow:none}45%{opacity:0;text-shadow:none}45.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}50%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55.1%{opacity:0;text-shadow:none}57%{opacity:0;text-shadow:none}57.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60.1%{opacity:0;text-shadow:none}65%{opacity:0;text-shadow:none}65.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75.1%{opacity:0;text-shadow:none}77%{opacity:0;text-shadow:none}77.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85.1%{opacity:0;text-shadow:none}86%{opacity:0;text-shadow:none}86.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}100%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}}@keyframes text-flicker-in-glow{0%{opacity:0}10%{opacity:0;text-shadow:none}10.1%{opacity:1;text-shadow:none}10.2%{opacity:0;text-shadow:none}20%{opacity:0;text-shadow:none}20.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.25)}20.6%{opacity:0;text-shadow:none}30%{opacity:0;text-shadow:none}30.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.5%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.6%{opacity:0;text-shadow:none}45%{opacity:0;text-shadow:none}45.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}50%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55.1%{opacity:0;text-shadow:none}57%{opacity:0;text-shadow:none}57.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60.1%{opacity:0;text-shadow:none}65%{opacity:0;text-shadow:none}65.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75.1%{opacity:0;text-shadow:none}77%{opacity:0;text-shadow:none}77.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85.1%{opacity:0;text-shadow:none}86%{opacity:0;text-shadow:none}86.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}100%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}}
+	@-webkit-keyframes text-flicker-in-glow {
+		0%{opacity:0}
+		10%{opacity:0;text-shadow:none}
+		10.1%{opacity:1;text-shadow:none}
+		10.2%{opacity:0;text-shadow:none}
+		20%{opacity:0;text-shadow:none}
+		20.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.25)}
+		20.6%{opacity:0;text-shadow:none}
+		30%{opacity:0;text-shadow:none}
+		30.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}
+		30.5%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}
+		30.6%{opacity:0;text-shadow:none}
+		45%{opacity:0;text-shadow:none}
+		45.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}
+		50%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}
+		55.1%{opacity:0;text-shadow:none}
+		57%{opacity:0;text-shadow:none}
+		57.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}
+		60%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60.1%{opacity:0;text-shadow:none}
+		65%{opacity:0;text-shadow:none}
+		65.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}
+		75%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}
+		75.1%{opacity:0;text-shadow:none}77%{opacity:0;text-shadow:none}
+		77.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}
+		85%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}
+		85.1%{opacity:0;text-shadow:none}86%{opacity:0;text-shadow:none}
+		86.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}
+		100%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}}
+		
+		@keyframes text-flicker-in-glow { 
+			0%{opacity:0}
+			10%{opacity:0;text-shadow:none}
+			10.1%{opacity:1;text-shadow:none}
+			10.2%{opacity:0;text-shadow:none}
+			20%{opacity:0;text-shadow:none}
+			20.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.25)}
+			20.6%{opacity:0;text-shadow:none}
+			30%{opacity:0;text-shadow:none}
+			30.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}
+			30.5%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}
+			30.6%{opacity:0;text-shadow:none}45%{opacity:0;text-shadow:none}
+			45.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}
+			50%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}
+			55%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}
+			55.1%{opacity:0;text-shadow:none}
+			57%{opacity:0;text-shadow:none}
+			57.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}
+			60%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}
+			60.1%{opacity:0;text-shadow:none}65%{opacity:0;text-shadow:none}
+			65.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}
+			75%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}
+			75.1%{opacity:0;text-shadow:none}
+			77%{opacity:0;text-shadow:none}
+			77.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}
+			85%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}
+			85.1%{opacity:0;text-shadow:none}
+			86%{opacity:0;text-shadow:none}
+			86.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}
+			100%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)
+		}
+	}
 
 
-.coming-soon {
-  font-weight: 400;
-  font-family: 'Monoton', cursive;
-  font-size: 1.8rem;
-  margin-bottom: 3.6rem;
-  text-align: center;
-}
-
+	
 
 		
 
-	</style>
+</style>
 
 
 
 
 
 </head>
-<body>
+	<body>
 
-	<div id="bg"></div>
+		<div id="bg"></div>
 
-    <div class="container-root">
+			<div class="container-root">
 
-        <header class="">
+				
 
-            <div class="left">
+					<header class="">
 
-                <ul class="c-rainbow">
-                    <!-- <li class="c-rainbow__layer c-rainbow__layer--white">GET LUCKY</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--orange">GET LUCKY</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--red">GET LUCKY</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--violet">GET LUCKY</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--blue">GET LUCKY</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--green">GET LUCKY</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--yellow">GET LUCKY</li> -->
+						<div class="container-rainbow">
 
+							<ul class="c-rainbow">
+								<li class="c-rainbow__layer c-rainbow__layer--white">Lucky Club</li>
+								<li class="c-rainbow__layer c-rainbow__layer--orange">Lucky Club</li>
+								<li class="c-rainbow__layer c-rainbow__layer--red">Lucky Club</li>
+								<li class="c-rainbow__layer c-rainbow__layer--violet">Lucky Club</li>
+								<li class="c-rainbow__layer c-rainbow__layer--blue">Lucky Club</li>
+								<li class="c-rainbow__layer c-rainbow__layer--green">Lucky Club</li>
+								<li class="c-rainbow__layer c-rainbow__layer--yellow">Lucky Club</li>
+							</ul>
 
-                    <li class="c-rainbow__layer c-rainbow__layer--white">LUCKY CLUB</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--orange">LUCKY CLUB</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--red">LUCKY CLUB</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--violet">LUCKY CLUB</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--blue">LUCKY CLUB</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--green">LUCKY CLUB</li>
-                    <li class="c-rainbow__layer c-rainbow__layer--yellow">LUCKY CLUB</li>
-                </ul>
-            </div>
+						</div>
 
-            <div class="right">
+						<div class="header-text">Coming Soon</div>
+						
+							<!-- <ul class="c-rainbow">
+								<li class="c-rainbow__layer c-rainbow__layer--white">Coming Soon</li>
+								<li class="c-rainbow__layer c-rainbow__layer--orange">Coming Soon</li>
+								<li class="c-rainbow__layer c-rainbow__layer--red">Coming Soon</li>
+								<li class="c-rainbow__layer c-rainbow__layer--violet">Coming Soon</li>
+								<li class="c-rainbow__layer c-rainbow__layer--blue">Coming Soon</li>
+								<li class="c-rainbow__layer c-rainbow__layer--green">Coming Soon</li>
+								<li class="c-rainbow__layer c-rainbow__layer--yellow">Coming Soon</li>
+							</ul> -->
+						
 
-                <a href="" class="">
-                    <ul class="c-rainbow">
-                        <li class="c-rainbow__layer c-rainbow__layer--white">WTF?</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--orange">WTF?</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--red">WTF?</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--violet">WTF?</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--blue">WTF?</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--green">WTF?</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--yellow">WTF?</li>
-                    </ul>
-                </a>
+					</header>
 
-            </div>
+					<footer class=""> 
+						
+						<!-- <a href=""> -->
+							<div class="coming-soon">WTF 🧐 is The Lucky Club???</div>
+						<!-- </a> -->
+					</footer>
 
-        </header>
+				
 
-        <footer>
-            <div class="footer-content">
-                <div class="coming-soon">Whitelist and Roadmap Coming Soon</div>
-            </div>
-        </footer>
+			</div>
+			
+			
+			<script text="text/javascript">
+				new Sign().print(document.body)
+			</script>
 
-    </div>
+			<script text="text/javascript">
+				const target = window.document.getElementsByClassName("coming-soon")[0];
 
+				const flickerLetter = (letter) =>
+				`<span style="animation: text-flicker-in-glow ${
+						Math.random() * 4
+				}s linear both ">${letter}</span>`;
+				const colorLetter = (letter) =>
+				`<span style="color: hsla(${
+						Math.random() * 360
+				}, 100%, 80%, 1);">${letter}</span>`;
+				const flickerAndColorText = (text) =>
+				text.split("").map(flickerLetter).map(colorLetter).join("");
+				const neonGlory = (target) =>
+				(target.innerHTML = flickerAndColorText(target.textContent));
 
-	 <script text="text/javascript">
-        new Sign().print(document.body)
-    </script>
-
-    <script text="text/javascript">
-        const target = window.document.getElementsByClassName("coming-soon")[0];
-
-        const flickerLetter = (letter) =>
-        `<span style="animation: text-flicker-in-glow ${
-            Math.random() * 4
-        }s linear both ">${letter}</span>`;
-        const colorLetter = (letter) =>
-        `<span style="color: hsla(${
-            Math.random() * 360
-        }, 100%, 80%, 1);">${letter}</span>`;
-        const flickerAndColorText = (text) =>
-        text.split("").map(flickerLetter).map(colorLetter).join("");
-        const neonGlory = (target) =>
-        (target.innerHTML = flickerAndColorText(target.textContent));
-
-        neonGlory(target);
-        target.onclick = ({ target }) => neonGlory(target);
-
-    </script>
+				neonGlory(target);
+				target.onclick = ({ target }) => neonGlory(target);
+			</script>
+			
     </body>
 </html>
